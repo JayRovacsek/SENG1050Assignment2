@@ -1,0 +1,8 @@
+Hi, You've attempted to access something that yet doesn't exit.
+Instead of a witty or funny 404 page, you get to read this 
+state-of-the-art text document!
+
+Sorry if you read this over a non-LAN connection. I've just wasted 
+around 300 bytes of data assuming the connection is metered.
+
+Adios Amigo!

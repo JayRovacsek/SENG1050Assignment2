@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE template [
+<!ELEMENT template (restaurants,other)>
+  <!ELEMENT restaurants (restaurant*)>
+    <!ELEMENT restaurant (restaurantName,about,contact,openHours,deliveryDetails,menu)>
+      <!ELEMENT restaurantName (#PCDATA)>
+
+    <!ELEMENT about (restaurantDescription,priceRange,cuisineType,restaurantLogo?,restaurantPicture+)>
+      <!ELEMENT restaurantDescription (#PCDATA)>
+      <!ELEMENT priceRange (#PCDATA)>
+      <!ELEMENT cuisineType (#PCDATA)>
+      <!ELEMENT restaurantLogo (#PCDATA)>
+      <!ELEMENT restaurantPicture (#PCDATA)>
+
+    <!ELEMENT contact (address,phoneContact+,URL)>
+      <!ELEMENT address (streetNumber,streetName,streetType,locality,postcode)>
+        <!ELEMENT streetNumber (#PCDATA)>
+        <!ELEMENT streetName (#PCDATA)>
+        <!ELEMENT streetType (#PCDATA)>
+        <!ELEMENT locality (#PCDATA)>
+        <!ELEMENT postcode (#PCDATA)>
+      <!ELEMENT phoneContact EMPTY>
+        <!ATTLIST phoneContact lineType (Landline|Mobile) #REQUIRED>
+        <!ATTLIST phoneContact contactNumber CDATA #REQUIRED>
+      <!ELEMENT URL (#PCDATA)>
+
+    <!ELEMENT openHours (servicePeriod*)>
+      <!ELEMENT servicePeriod (day,startTime,endTime)>
+        <!ELEMENT day EMPTY>
+          <!ATTLIST day dayOfWeek (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday) #REQUIRED>
+        <!ELEMENT startTime (#PCDATA)>
+        <!ELEMENT endTime (#PCDATA)>
+
+    <!ELEMENT deliveryDetails (minimumPrice,deliveryFee)>
+      <!ELEMENT minimumPrice (#PCDATA)>
+      <!ELEMENT deliveryFee (#PCDATA)>
+
+    <!ELEMENT menu (item*)>
+      <!ELEMENT item (itemName,itemDescription,itemType,price,allergens)>
+        <!ELEMENT itemName (#PCDATA)>
+        <!ELEMENT itemDescription (#PCDATA)>
+        <!ELEMENT itemType EMPTY>
+          <!ATTLIST itemType dishType (beef|chicken|pork|seafood|vegetarian|vegan) #REQUIRED>
+        <!ELEMENT price (#PCDATA)>
+        <!ELEMENT allergens (#PCDATA)>
+
+  <!ELEMENT other (#PCDATA)>
+
+    <!ENTITY websiteDesignBy "Website design by: Jay Rovacsek - c3146220">
+]>
+
+<template>
+  <restaurants>
+
+  <!-- ####################################################### Start of restaurant definition ####################################################### -->
+
+    <restaurant>
+      <restaurantName>Kitami</restaurantName>
+
+      <!-- Start of about definition ####################################################### -->
+      <about>
+        <restaurantDescription>Kitami Hamilton Take away and Restaurant is the first ever Japanese take away in Beaumont St. that Nobuyuki built from scratch after his partners of Kitami Darby St. had to leave and sell the place. It's a B.Y.O. wine licensed which made it easier and cheaper for the customer. The place will fill your stomach with heavy Japanese food either lunch or dinner. Staff are well trained by the owner and sashimis are still made by the Head Chef and Owner Nobuyuki, so it won't let you down.</restaurantDescription>
+        <priceRange>$10-$50</priceRange>
+        <cuisineType>Japanese</cuisineType>
+        <restaurantLogo>/images/kitamilogo.png</restaurantLogo>
+        <restaurantPicture>/images/kitamirestaurant.jpg</restaurantPicture>
+      </about>
+
+      <!-- Start of contact definition, considered extensibility to state/country, but figured that is outside scope of requirements -->
+      <contact>
+        <address>
+          <streetNumber>22</streetNumber>
+          <streetName>Beaumont</streetName>
+          <streetType>Street</streetType>
+          <locality>Hamilton</locality>
+          <postcode>2304</postcode>
+        </address>
+        <phoneContact lineType="Landline" contactNumber="0249698540" />
+        <URL>http://www.kitami-japanese-restaurant.com/</URL>
+      </contact>
+
+      <!-- Start of open hours definition, while singular as required by assignment, children exist to allow entry of multiple days and potentially multiple
+           Open hours per day or different segments for breakfast, lunch, dinner, etc -->
+      <openHours>
+        <servicePeriod>
+          <day dayOfWeek="Monday" />
+          <startTime>11:00am</startTime>
+          <endTime>9:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Tuesday" />
+          <startTime>11:00am</startTime>
+          <endTime>9:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Wednesday" />
+          <startTime>11:00am</startTime>
+          <endTime>9:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Thursday" />
+          <startTime>11:00am</startTime>
+          <endTime>9:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Friday" />
+          <startTime>11:00am</startTime>
+          <endTime>9:00pm</endTime>
+        </servicePeriod>
+      </openHours>
+
+        <!-- Start of delivery definition, as per requirements of assignment ####################################################### -->
+      <deliveryDetails>
+        <minimumPrice>$20</minimumPrice>
+        <deliveryFee>$10</deliveryFee>
+      </deliveryDetails>
+
+        <!-- Start of menu definition, aint that nifty? ####################################################### -->
+      <menu>
+        <item>
+          <itemName>Chicken Katsu Don</itemName>
+          <itemDescription>Crumbed chicken with a bed of rice and egg cooked ontop</itemDescription>
+          <itemType dishType="chicken" />
+          <price>$12</price>
+          <allergens>NA</allergens>
+        </item>
+        <item>
+          <itemName>Pork Shogayaki</itemName>
+          <itemDescription>Pork cooked in a soy, mirin and ginger sauce on a bed of rice</itemDescription>
+          <itemType dishType="pork" />
+          <price>$14</price>
+          <allergens>NA</allergens>
+        </item>
+        <item>
+          <itemName>Shiozake</itemName>
+          <itemDescription>Gilled salted salmon on a bed of rice</itemDescription>
+          <itemType dishType="seafood" />
+          <price>$16</price>
+          <allergens>Seafood</allergens>
+        </item>
+      </menu>
+    </restaurant>
+
+<!--#######################################################DIVIDER TO MAKE THIS EASIER TO READ##########################################################-->
+
+    <restaurant>
+      <restaurantName>Nagisa</restaurantName>
+
+      <!-- Start of about definition ####################################################### -->
+      <about>
+        <restaurantDescription>Exquisite, traditional Japanese food with a subtle, contemporary edge; harbourside in the Honeysuckle Precinct of Newcastle.</restaurantDescription>
+        <priceRange>$20-$150</priceRange>
+        <cuisineType>Japanese</cuisineType>
+        <restaurantLogo>/images/nagisalogo.png</restaurantLogo>
+        <restaurantPicture>/images/nagisarestaurant.jpg</restaurantPicture>
+      </about>
+
+      <!-- Start of contact definition, considered extensibility to state/country, but figured that is outside scope of requirements -->
+      <contact>
+        <address>
+          <streetNumber>2</streetNumber>
+          <streetName>The Boardwalk</streetName>
+          <streetType>Drive</streetType>
+          <locality>Honeysuckle</locality>
+          <postcode>2300</postcode>
+        </address>
+        <phoneContact lineType="Landline" contactNumber="0249294122" />
+        <URL>http://www.nagisa.com.au/</URL>
+      </contact>
+
+      <!-- Start of open hours definition, while singular as required by assignment, children exist to allow entry of multiple days and potentially multiple
+           Open hours per day or different segments for breakfast, lunch, dinner, etc -->
+      <openHours>
+        <servicePeriod>
+          <day dayOfWeek="Monday" />
+          <startTime>11:30am</startTime>
+          <endTime>9:30pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Tuesday" />
+          <startTime>11:30am</startTime>
+          <endTime>9:30pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Wednesday" />
+          <startTime>11:30am</startTime>
+          <endTime>9:30pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Thursday" />
+          <startTime>11:30am</startTime>
+          <endTime>9:30pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Friday" />
+          <startTime>11:30am</startTime>
+          <endTime>9:30pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Saturday" />
+          <startTime>11:30am</startTime>
+          <endTime>3:00pm</endTime>
+        </servicePeriod>
+      </openHours>
+
+        <!-- Start of delivery definition, as per requirements of assignment ####################################################### -->
+      <deliveryDetails>
+        <minimumPrice>$18</minimumPrice>
+        <deliveryFee>$12</deliveryFee>
+      </deliveryDetails>
+
+        <!-- Start of menu definition, aint that nifty? ####################################################### -->
+      <menu>
+        <item>
+          <itemName>Chicken Karaage</itemName>
+          <itemDescription>Fried chicken pieces marinated in soy, ginger and shiokoji with our spicy, pirikara mayonnaise</itemDescription>
+          <itemType dishType="chicken" />
+          <price>$17</price>
+          <allergens>NA</allergens>
+        </item>
+        <item>
+          <itemName>Kabocha Korokke</itemName>
+          <itemDescription>Panko crumbed, roast Japanese pumpkin croquettes with ponzu aioli</itemDescription>
+          <itemType dishType="vegetarian" />
+          <price>$16</price>
+          <allergens>NA</allergens>
+        </item>
+        <item>
+          <itemName>Miso Kingfish</itemName>
+          <itemDescription>Roast kingfish, organic sweet Meru Miso glaze, sunomono cucumber</itemDescription>
+          <itemType dishType="seafood" />
+          <price>$22</price>
+          <allergens>Seafood</allergens>
+        </item>
+      </menu>
+    </restaurant>
+
+<!--#######################################################DIVIDER TO MAKE THIS EASIER TO READ##########################################################-->
+
+    <restaurant>
+      <restaurantName>Asa-Don</restaurantName>
+
+      <!-- Start of about definition ####################################################### -->
+      <about>
+        <restaurantDescription>Asa-Don is a small team of passionate food lovers lead by Asako Dalby, here to spread the experience of home-made Japanese way of eating.</restaurantDescription>
+        <priceRange>$20-$60</priceRange>
+        <cuisineType>Japanese</cuisineType>
+        <restaurantLogo>/images/asadonlogo.png</restaurantLogo>
+        <restaurantPicture>/images/asadonrestaurant.jpg</restaurantPicture>
+      </about>
+
+      <!-- Start of contact definition, considered extensibility to state/country, but figured that is outside scope of requirements -->
+      <contact>
+        <address>
+          <streetNumber>179</streetNumber>
+          <streetName>King</streetName>
+          <streetType>Street</streetType>
+          <locality>Newcastle</locality>
+          <postcode>2300</postcode>
+        </address>
+        <phoneContact lineType="Landline" contactNumber="0249291035" />
+        <URL>https://asa-don.com.au/</URL>
+      </contact>
+
+      <!-- Start of open hours definition, while singular as required by assignment, children exist to allow entry of multiple days and potentially multiple
+      Open hours per day or different segments for breakfast, lunch, dinner, etc -->
+      <openHours>
+        <servicePeriod>
+          <day dayOfWeek="Tuesday" />
+          <startTime>11:30am</startTime>
+          <endTime>8:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Wednesday" />
+          <startTime>11:30am</startTime>
+          <endTime>8:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Thursday" />
+          <startTime>11:30am</startTime>
+          <endTime>8:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Friday" />
+          <startTime>11:30am</startTime>
+          <endTime>8:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Saturday" />
+          <startTime>5:00pm</startTime>
+          <endTime>3pm</endTime>
+        </servicePeriod>
+      </openHours>
+
+      <!-- Start of delivery definition, as per requirements of assignment ####################################################### -->
+      <deliveryDetails>
+        <minimumPrice>$30</minimumPrice>
+        <deliveryFee>$5</deliveryFee>
+      </deliveryDetails>
+
+      <!-- Start of menu definition, aint that nifty? ####################################################### -->
+      <menu>
+        <item>
+          <itemName>Omu-Curry Rice</itemName>
+          <itemDescription>Japanese curry with rice omelette and braised chicken</itemDescription>
+          <itemType dishType="chicken" />
+          <price>$13</price>
+          <allergens>NA</allergens>
+        </item>
+        <item>
+          <itemName>Buta Don</itemName>
+          <itemDescription>Pork with special sauce and vegetable served over a bowl of rice.</itemDescription>
+          <itemType dishType="vegetarian" />
+          <price>$16</price>
+          <allergens>NA</allergens>
+        </item>
+        <item>
+          <itemName>Ebi Ten Soba</itemName>
+          <itemDescription>Soba (buck wheat noodles) in a hot soup and prawn tempura on the side</itemDescription>
+          <itemType dishType="seafood" />
+          <price>$18</price>
+          <allergens>Seafood</allergens>
+        </item>
+      </menu>
+    </restaurant>
+
+  </restaurants>
+  <other>&websiteDesignBy;</other>
+</template>

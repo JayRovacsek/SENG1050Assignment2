@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE template [
+<!ELEMENT template (restaurants,other)>
+  <!ELEMENT restaurants (restaurant*)>
+    <!ELEMENT restaurant (restaurantName,about,contact,openHours,deliveryDetails,menu)>
+      <!ELEMENT restaurantName (#PCDATA)>
+
+    <!ELEMENT about (restaurantDescription,priceRange,cuisineType,restaurantLogo?,restaurantPicture+)>
+      <!ELEMENT restaurantDescription (#PCDATA)>
+      <!ELEMENT priceRange (#PCDATA)>
+      <!ELEMENT cuisineType (#PCDATA)>
+      <!ELEMENT restaurantLogo (#PCDATA)>
+      <!ELEMENT restaurantPicture (#PCDATA)>
+
+    <!ELEMENT contact (address,phoneContact+,URL)>
+      <!ELEMENT address (streetNumber,streetName,streetType,locality,postcode)>
+        <!ELEMENT streetNumber (#PCDATA)>
+        <!ELEMENT streetName (#PCDATA)>
+        <!ELEMENT streetType (#PCDATA)>
+        <!ELEMENT locality (#PCDATA)>
+        <!ELEMENT postcode (#PCDATA)>
+      <!ELEMENT phoneContact EMPTY>
+        <!ATTLIST phoneContact lineType (Landline|Mobile) #REQUIRED>
+        <!ATTLIST phoneContact contactNumber CDATA #REQUIRED>
+      <!ELEMENT URL (#PCDATA)>
+
+    <!ELEMENT openHours (servicePeriod*)>
+      <!ELEMENT servicePeriod (day,startTime,endTime)>
+        <!ELEMENT day EMPTY>
+          <!ATTLIST day dayOfWeek (Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday) #REQUIRED>
+        <!ELEMENT startTime (#PCDATA)>
+        <!ELEMENT endTime (#PCDATA)>
+
+    <!ELEMENT deliveryDetails (minimumPrice,deliveryFee)>
+      <!ELEMENT minimumPrice (#PCDATA)>
+      <!ELEMENT deliveryFee (#PCDATA)>
+
+    <!ELEMENT menu (item*)>
+      <!ELEMENT item (itemName,itemDescription,itemType,price,allergens)>
+        <!ELEMENT itemName (#PCDATA)>
+        <!ELEMENT itemDescription (#PCDATA)>
+        <!ELEMENT itemType EMPTY>
+          <!ATTLIST itemType dishType (beef|chicken|pork|seafood|vegetarian|vegan) #REQUIRED>
+        <!ELEMENT price (#PCDATA)>
+        <!ELEMENT allergens (#PCDATA)>
+
+  <!ELEMENT other (#PCDATA)>
+
+    <!ENTITY websiteDesignBy "Website design by: Jay Rovacsek - c3146220">
+]>
+
+<template>
+
+  <!-- Start of restaurants definition ###########################################################################################################-->
+  <restaurants>
+    <restaurant>
+      <restaurantName></restaurantName>
+
+      <!-- Start of about definition ###########################################################################################################-->
+      <about>
+        <restaurantDescription></restaurantDescription>
+        <priceRange></priceRange>
+        <cuisineType></cuisineType>
+        <restaurantLogo></restaurantLogo>
+        <restaurantPicture></restaurantPicture>
+      </about>
+
+      <!-- Start of contact definition, considered extensibility to state/country, but figured that is outside scope of requirements ############-->
+      <contact>
+        <address>
+          <streetNumber></streetNumber>
+          <streetName></streetName>
+          <streetType></streetType>
+          <locality></locality>
+          <postcode></postcode>
+        </address>
+        <phoneContact lineType="Landline" contactNumber="0000000000" />
+        <phoneContact lineType="Mobile" contactNumber="0000000000" />
+        <URL></URL>
+      </contact>
+
+      <!-- Start of open hours definition, while singular as required by assignment, children exist to allow entry of multiple days and potentially multiple
+           Open hours per day or different segments for breakfast, lunch, dinner, etc -->
+        <openHours>
+          <servicePeriod>
+            <day dayOfWeek="Monday" />
+            <startTime></startTime>
+            <endTime></endTime>
+          </servicePeriod>
+        </openHours>
+
+        <!-- Start of delivery definition, as per requirements of assignment ###########################################################################################################-->
+        <deliveryDetails>
+          <minimumPrice></minimumPrice>
+          <deliveryFee></deliveryFee>
+        </deliveryDetails>
+
+        <!-- Start of menu definition, aint that nifty? ###########################################################################################################-->
+        <menu>
+          <item>
+            <itemName></itemName>
+            <itemDescription></itemDescription>
+            <itemType dishType="beef" />
+            <price></price>
+            <allergens></allergens>
+          </item>
+        </menu>
+    </restaurant>
+  </restaurants>
+  <other>&websiteDesignBy;</other>
+</template>
