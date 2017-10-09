@@ -3,7 +3,7 @@
 body {
 	color:white; 
 	background-color:black;
-	background: url(images/restaurant-CC.jpg);
+	background: url(../images/restaurant-CC.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin-left: 1cm;
@@ -29,7 +29,7 @@ address {
 	font-style:italic;font-weight:900;
 	}
 a:visited {
-	color:#5C2664;
+	color:rgb(185, 219, 31);
 	}
 
 span{
@@ -37,7 +37,7 @@ span{
 }
 
 a:hover {
-	color:green;
+	color:rgb(118, 29, 201);
 	font-size: 20px;
 }
 
@@ -99,20 +99,11 @@ img {
 	margin: auto;
 }
 
-#Header {
-	text-align: center;
-	display: inline-block;
-	top: 2%;
-	height: 10%;
-	width: 95%;
-	position: absolute;
-	background-color:rgba(50, 50, 50, 0.5);
-}
-
 #Navigation {
 	text-align: center;
 	display: inline-block;
-	top:16%;
+	top:5%;
+	bottom:5%;
 	width: 10%;
 	padding-top: 10%;
 	padding-bottom: 10%;
@@ -121,7 +112,7 @@ img {
 	background-color:rgba(50, 50, 50, 0.5);
 }
 
-#Japanese, #Indian, #Italian, #Ethiopian, #Uruguayan, #About, #Form, #Contact {
+#Japanese, #Indian, #Italian, #Ethiopian, #Uruguayan, #About, #Form, #Contact, #Header {
 	background-color:rgba(50, 50, 50, 0.5);
 	padding-top: 1em;
 	padding-bottom: 1em;
@@ -133,10 +124,9 @@ img {
 #OtherElementsContainer{
 	margin-left: 12%;
 	position: absolute;
-	top: 13%;
+	top: 2%;
 	width:82%;
 	display: inline-block;
-	overflow-y: auto;
 }
 
 #Form {
@@ -145,4 +135,24 @@ img {
 
 #Footer{
 	text-align: center;
+}
+select{
+	top: 2%;
+	left: 20%;
+	position: relative;
+}
+
+label{
+	top: 2%;
+	position: relative;
+	z-index: auto;
+	align-self: center;
+}
+
+input{
+	position: relative;
+	left: 20%;
+	top: 2%;
+	z-index: auto;
+	align-items: center;
 }

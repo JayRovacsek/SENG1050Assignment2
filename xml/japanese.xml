@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/xslStylesheet.xsl"?>
 <!DOCTYPE template [
 <!ELEMENT template (restaurants,other)>
   <!ELEMENT restaurants (restaurant*)>
@@ -55,28 +56,28 @@
   <!-- ####################################################### Start of restaurant definition ####################################################### -->
 
     <restaurant>
-      <restaurantName>Saphire Indian</restaurantName>
+      <restaurantName>Kitami</restaurantName>
 
       <!-- Start of about definition ####################################################### -->
       <about>
-        <restaurantDescription>Indian fine dining restaurant located between Merewether and Adamstown offering 5 star food and service, including dine in, takeaway, delivery and catering</restaurantDescription>
-        <priceRange>$15-$70</priceRange>
-        <cuisineType>Indian</cuisineType>
-        <restaurantLogo>https://sapphireindianrestaurant.com.au/wp-content/uploads/2016/05/logo-60px.png</restaurantLogo>
-        <restaurantPicture>https://sapphireindianrestaurant.com.au/wp-content/uploads/bb-plugin/cache/img-gallery-028-landscape.jpg</restaurantPicture>
+        <restaurantDescription>Kitami Hamilton Take away and Restaurant is the first ever Japanese take away in Beaumont St. that Nobuyuki built from scratch after his partners of Kitami Darby St. had to leave and sell the place. It's a B.Y.O. wine licensed which made it easier and cheaper for the customer. The place will fill your stomach with heavy Japanese food either lunch or dinner. Staff are well trained by the owner and sashimis are still made by the Head Chef and Owner Nobuyuki, so it won't let you down.</restaurantDescription>
+        <priceRange>$10-$50</priceRange>
+        <cuisineType>Japanese</cuisineType>
+        <restaurantLogo>kitamilogo.png</restaurantLogo>
+        <restaurantPicture>kitamirestaurant.jpg</restaurantPicture>
       </about>
 
       <!-- Start of contact definition, considered extensibility to state/country, but figured that is outside scope of requirements -->
       <contact>
         <address>
-          <streetNumber>367-369</streetNumber>
-          <streetName>Glebe</streetName>
-          <streetType>Road</streetType>
-          <locality>Merewether</locality>
-          <postcode>2291</postcode>
+          <streetNumber>22</streetNumber>
+          <streetName>Beaumont</streetName>
+          <streetType>Street</streetType>
+          <locality>Hamilton</locality>
+          <postcode>2304</postcode>
         </address>
-        <phoneContact lineType="Landline" contactNumber="0249632369" />
-        <URL>https://sapphireindianrestaurant.com.au/</URL>
+        <phoneContact lineType="Landline" contactNumber="0249698540" />
+        <URL>http://www.kitami-japanese-restaurant.com/</URL>
       </contact>
 
       <!-- Start of open hours definition, while singular as required by assignment, children exist to allow entry of multiple days and potentially multiple
@@ -84,44 +85,32 @@
       <openHours>
         <servicePeriod>
           <day dayOfWeek="Monday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
+          <startTime>11:00am</startTime>
+          <endTime>9:00pm</endTime>
         </servicePeriod>
 
         <servicePeriod>
           <day dayOfWeek="Tuesday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
+          <startTime>11:00am</startTime>
+          <endTime>9:00pm</endTime>
         </servicePeriod>
 
         <servicePeriod>
           <day dayOfWeek="Wednesday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
+          <startTime>11:00am</startTime>
+          <endTime>9:00pm</endTime>
         </servicePeriod>
 
         <servicePeriod>
           <day dayOfWeek="Thursday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
+          <startTime>11:00am</startTime>
+          <endTime>9:00pm</endTime>
         </servicePeriod>
 
         <servicePeriod>
           <day dayOfWeek="Friday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
-        </servicePeriod>
-
-        <servicePeriod>
-          <day dayOfWeek="Saturday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
-        </servicePeriod>
-
-        <servicePeriod>
-          <day dayOfWeek="Sunday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
+          <startTime>11:00am</startTime>
+          <endTime>9:00pm</endTime>
         </servicePeriod>
       </openHours>
 
@@ -134,24 +123,24 @@
         <!-- Start of menu definition, aint that nifty? ####################################################### -->
       <menu>
         <item>
-          <itemName>Onion Bhajji</itemName>
-          <itemDescription>Onion Bhajis are tasty little onion balls bound together with lightly spiced and fragrant chickpea flour batter</itemDescription>
-          <itemType dishType="vegetarian" />
-          <price>$12.90</price>
+          <itemName>Chicken Katsu Don</itemName>
+          <itemDescription>Crumbed chicken with a bed of rice and egg cooked ontop</itemDescription>
+          <itemType dishType="chicken" />
+          <price>$12</price>
           <allergens>NA</allergens>
         </item>
         <item>
-          <itemName>Paneer Shashlik</itemName>
-          <itemDescription>Cottage cheese, onion, capsicum and tomatoes grilled to perfection with Smokey and zesty flavours</itemDescription>
-          <itemType dishType="vegetarian" />
-          <price>$16.90</price>
+          <itemName>Pork Shogayaki</itemName>
+          <itemDescription>Pork cooked in a soy, mirin and ginger sauce on a bed of rice</itemDescription>
+          <itemType dishType="pork" />
+          <price>$14</price>
           <allergens>NA</allergens>
         </item>
         <item>
-          <itemName>Zingha Vada</itemName>
-          <itemDescription>Black Tiger King Prawns are coated in a light thin batter coated with spices and deep fried</itemDescription>
+          <itemName>Shiozake</itemName>
+          <itemDescription>Gilled salted salmon on a bed of rice</itemDescription>
           <itemType dishType="seafood" />
-          <price>$22.90</price>
+          <price>$16</price>
           <allergens>Seafood</allergens>
         </item>
       </menu>
@@ -160,28 +149,28 @@
 <!--#######################################################DIVIDER TO MAKE THIS EASIER TO READ##########################################################-->
 
     <restaurant>
-      <restaurantName>Raj's Corner</restaurantName>
+      <restaurantName>Nagisa</restaurantName>
 
       <!-- Start of about definition ####################################################### -->
       <about>
         <restaurantDescription>Exquisite, traditional Japanese food with a subtle, contemporary edge; harbourside in the Honeysuckle Precinct of Newcastle.</restaurantDescription>
         <priceRange>$20-$150</priceRange>
         <cuisineType>Japanese</cuisineType>
-        <restaurantLogo>http://www.nagisa.com.au/images/system/nagisa-logo.png</restaurantLogo>
-        <restaurantPicture>http://www.hunterhunter.com.au/images/nagisa/nagisa-interior.jpg</restaurantPicture>
+        <restaurantLogo>../images/nagisalogo.png</restaurantLogo>
+        <restaurantPicture>../images/nagisarestaurant.jpg</restaurantPicture>
       </about>
 
       <!-- Start of contact definition, considered extensibility to state/country, but figured that is outside scope of requirements -->
       <contact>
         <address>
-          <streetNumber>200</streetNumber>
-          <streetName>Beaumont</streetName>
-          <streetType>Street</streetType>
-          <locality>Hamilton</locality>
-          <postcode>2303</postcode>
+          <streetNumber>2</streetNumber>
+          <streetName>The Boardwalk</streetName>
+          <streetType>Drive</streetType>
+          <locality>Honeysuckle</locality>
+          <postcode>2300</postcode>
         </address>
-        <phoneContact lineType="Landline" contactNumber="0249621827" />
-        <URL>https://rajscorner.com.au/</URL>
+        <phoneContact lineType="Landline" contactNumber="0249294122" />
+        <URL>http://www.nagisa.com.au/</URL>
       </contact>
 
       <!-- Start of open hours definition, while singular as required by assignment, children exist to allow entry of multiple days and potentially multiple
@@ -189,51 +178,45 @@
       <openHours>
         <servicePeriod>
           <day dayOfWeek="Monday" />
-          <startTime>10:30am</startTime>
-          <endTime>10:00pm</endTime>
+          <startTime>11:30am</startTime>
+          <endTime>9:30pm</endTime>
         </servicePeriod>
 
         <servicePeriod>
           <day dayOfWeek="Tuesday" />
-          <startTime>10:30am</startTime>
-          <endTime>10:00pm</endTime>
+          <startTime>11:30am</startTime>
+          <endTime>9:30pm</endTime>
         </servicePeriod>
 
         <servicePeriod>
           <day dayOfWeek="Wednesday" />
-          <startTime>10:30am</startTime>
-          <endTime>10:00pm</endTime>
+          <startTime>11:30am</startTime>
+          <endTime>9:30pm</endTime>
         </servicePeriod>
 
         <servicePeriod>
           <day dayOfWeek="Thursday" />
-          <startTime>10:30am</startTime>
-          <endTime>10:00pm</endTime>
+          <startTime>11:30am</startTime>
+          <endTime>9:30pm</endTime>
         </servicePeriod>
 
         <servicePeriod>
           <day dayOfWeek="Friday" />
-          <startTime>10:30am</startTime>
-          <endTime>10:00pm</endTime>
+          <startTime>11:30am</startTime>
+          <endTime>9:30pm</endTime>
         </servicePeriod>
 
         <servicePeriod>
           <day dayOfWeek="Saturday" />
-          <startTime>10:30am</startTime>
-          <endTime>10:00pm</endTime>
-        </servicePeriod>
-
-        <servicePeriod>
-          <day dayOfWeek="Sunday" />
-          <startTime>10:30am</startTime>
-          <endTime>10:00pm</endTime>
+          <startTime>11:30am</startTime>
+          <endTime>3:00pm</endTime>
         </servicePeriod>
       </openHours>
 
         <!-- Start of delivery definition, as per requirements of assignment ####################################################### -->
       <deliveryDetails>
-        <minimumPrice>$30</minimumPrice>
-        <deliveryFee>$0</deliveryFee>
+        <minimumPrice>$18</minimumPrice>
+        <deliveryFee>$12</deliveryFee>
       </deliveryDetails>
 
         <!-- Start of menu definition, aint that nifty? ####################################################### -->
@@ -265,28 +248,28 @@
 <!--#######################################################DIVIDER TO MAKE THIS EASIER TO READ##########################################################-->
 
     <restaurant>
-      <restaurantName>Surtaj Indian</restaurantName>
+      <restaurantName>Asa-Don</restaurantName>
 
       <!-- Start of about definition ####################################################### -->
       <about>
-        <restaurantDescription>Located in the heart of Newcastle, you will find our family run restaurant with over 18 years of experience.</restaurantDescription>
+        <restaurantDescription>Asa-Don is a small team of passionate food lovers lead by Asako Dalby, here to spread the experience of home-made Japanese way of eating.</restaurantDescription>
         <priceRange>$20-$60</priceRange>
-        <cuisineType>Indian</cuisineType>
-        <restaurantLogo>http://surtajindianrestaurant.com.au/wp-content/uploads/2012/03/logo23.jpg</restaurantLogo>
-        <restaurantPicture>http://surtajindianrestaurant.com.au/wp-content/uploads/2012/03/front1.jpg</restaurantPicture>
+        <cuisineType>Japanese</cuisineType>
+        <restaurantLogo>../images/asadonlogo.png</restaurantLogo>
+        <restaurantPicture>../images/asadonrestaurant.jpg</restaurantPicture>
       </about>
 
       <!-- Start of contact definition, considered extensibility to state/country, but figured that is outside scope of requirements -->
       <contact>
         <address>
-          <streetNumber>265</streetNumber>
-          <streetName>Hunter</streetName>
+          <streetNumber>179</streetNumber>
+          <streetName>King</streetName>
           <streetType>Street</streetType>
           <locality>Newcastle</locality>
           <postcode>2300</postcode>
         </address>
-        <phoneContact lineType="Landline" contactNumber="0249263555" />
-        <URL>http://surtajindianrestaurant.com.au/</URL>
+        <phoneContact lineType="Landline" contactNumber="0249291035" />
+        <URL>https://asa-don.com.au/</URL>
       </contact>
 
       <!-- Start of open hours definition, while singular as required by assignment, children exist to allow entry of multiple days and potentially multiple
@@ -332,22 +315,22 @@
       <!-- Start of menu definition, aint that nifty? ####################################################### -->
       <menu>
         <item>
-          <itemName>Beef Rogan Josh</itemName>
-          <itemDescription>A beef curry with special herbs and spices, mild.</itemDescription>
-          <itemType dishType="beef" />
+          <itemName>Omu-Curry Rice</itemName>
+          <itemDescription>Japanese curry with rice omelette and braised chicken</itemDescription>
+          <itemType dishType="chicken" />
           <price>$13</price>
           <allergens>NA</allergens>
         </item>
         <item>
-          <itemName>Mango Chicken</itemName>
-          <itemDescription>Chicken in a creamy mango infused sauce.</itemDescription>
-          <itemType dishType="chicken" />
+          <itemName>Buta Don</itemName>
+          <itemDescription>Pork with special sauce and vegetable served over a bowl of rice.</itemDescription>
+          <itemType dishType="vegetarian" />
           <price>$16</price>
           <allergens>NA</allergens>
         </item>
         <item>
-          <itemName>Prawn Pokora</itemName>
-          <itemDescription>Prawns dipped in a spicy chickpea and spice mix.</itemDescription>
+          <itemName>Ebi Ten Soba</itemName>
+          <itemDescription>Soba (buck wheat noodles) in a hot soup and prawn tempura on the side</itemDescription>
           <itemType dishType="seafood" />
           <price>$18</price>
           <allergens>Seafood</allergens>

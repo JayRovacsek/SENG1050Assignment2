@@ -4,14 +4,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link  rel="stylesheet" type="text/css" href="style.css" />
+    <link  rel="stylesheet" type="text/css" href="css/style.css" />
     <title>Contact Online Food Deliveries Newcastle</title>
 
-    <script type="text/javascript">
-      function userValidation() 
-      {
-        return false;
-      }
+    <script src="js/myJavaScripts.js" type="text/javascript">
     </script>
 
     <!-- NEED TO PLACE A PRIVACY POLICY ON HERE TOO -->
@@ -19,11 +15,6 @@
   </head>
 
   <body>
-    <div id="Header">
-      <h1>Online Food Deliveries</h1>
-      <h2><i>Straight to your door!</i></h2>
-    </div>
-
     <div id = "Navigation">
         <h3>Navigation</h3>
         <ul>
@@ -40,44 +31,52 @@
         </ul>
       </div>
     <div id="OtherElementsContainer">
+      <div id="Header">
+          <h1>Online Food Deliveries</h1>
+          <h2><i>Straight to your door!</i></h2>
+      </div>
+      
       <form name="userFeedbackForm" method="post" action="http://evc-cit.info/cgi-bin/echoform.cgi" onSubmit="return userValidation()">
         <!--<input type="hidden" name="_recipient" value="guest1@cs.wellesley.edu"> NOT SURE IF NEEDED -->
         <div id="Form">
-          <h1 style="text-align:left">User Contact Form</h1>
-          <label for="yourname">Please enter your name</label>
-          <input type="text" name="yourname" id="yourname">
+          <h1>User Contact Form</h1>
+          <p><b>For our privacy policy: <a href="https://www.visser.com.au/blog/generic-privacy-policy-for-australian-websites/">please click here</a></b></p>
+          <label for="firstname">Please enter your first name:</label>
+          <input type="text" name="firstname" id="firstname"><br>
+          <label for="surname">Please enter your surname</label>
+          <input type="text" name="surname" id="surname"><br>
 
-          <label for="birthyear">Please enter your birth year</label>
-          <input type="text" name="birthyear" id="birthyear">
+          <label for="email">Please enter your email:</label>
+          <input type="text" name="email" id="email"><br>
 
+          <label for="Age Range">Please enter your age range:</label>
+          <select name="Age Range">
+              <option>Younger than 20</option>
+              <option>20 - 30</option>
+              <option>31 - 40</option>
+              <option>41 - 50</option>
+              <option>51 - 60</option>
+              <option>61 or older</option>
+          </select><br>
+
+          <label for="address">Please enter your address:</label>
+          <input type="text" name="address" id="address"><br>
+
+          <label>I would like to subscribe to an email newsletter:</label><br>
           <label for="yes">Yes</label>
-          <input type="checkbox" name="ghost" value="yes" id="yes">
-      
+          <input type="checkbox" name="yes" value="yes" id="yes">
           <label for="no">No</label>
-          <input type="checkbox" name="ghost" value="no" id="no">
+          <input type="checkbox" name="no" value="no" id="no"><br>
       
-          <label for="secret">It's a secret</label>
-          <input type="checkbox" name="ghost" value="Secret" id="secret">
+          <label>My submission is:</label><br>
+          <label for="submissionQuery">A Query:</label>
+          <input type="radio" name="submissionQuery" value="query" id="submissionQuery"><br>
 
-          <label for="graduation2008">2008</label>
-          <input type="radio" name="graduation" value="2008" id="graduation2008"><br>
-
-          <label for="graduation2009">2009</label>
-          <input type="radio" name="graduation" value="2009" id="graduation2009"><br>
+          <label for="submissionFeedback">Feedback:</label>
+          <input type="radio" name="submissionFeedback" value="feedback" id="submissionFeedback"><br>
           
-          <label for="graduation2010">2010</label>
-          <input type="radio" name="graduation" value="2010" id="graduation2010"><br>
-          
-          <label for="graduation2011">2011</label>
-          <input type="radio" name="graduation" value="20011" id="graduation2011"><br>
-
-          <select name="cartoon">
-              <option>select one</option>
-              <option>Bugs Bunny</option>
-              <option>Mickey Mouse</option>
-              <option>Yosemite Sam</option>
-              <option>Betty Boop</option>
-          </select>
+          <label for="submissionOther">Something else:</label>
+          <input type="radio" name="submissionOther" value="feedback" id="submissionOther"><br>
 
           <input type="submit" value="Click Here to Submit"> 
           <input type="reset"> 
