@@ -199,7 +199,8 @@ img {
 }
 
 #userradiobuttoninput label{
-	margin: 0 0 2% 0;
+	margin: 2% 0 0 0;
+	text-align: left;
 }
 
 #usersubmision{
@@ -210,5 +211,18 @@ img {
 
 #usersubmision input{
 	width: 80%;
+	margin: 0 10% 2% 10%;
+}
+
+#usertextinputlarge{
+	width: 100%;
+	vertical-align: baseline;
+	text-align: center;
+}
+
+#usertextinputlarge textarea{
+	resize: none;
+	width: 80%;
+	height: 200px;
 	margin: 0 10% 2% 10%;
 }
