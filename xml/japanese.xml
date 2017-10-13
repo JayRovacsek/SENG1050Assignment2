@@ -46,7 +46,6 @@
         <!ELEMENT allergens (#PCDATA)>
 
   <!ELEMENT other (#PCDATA)>
-
     <!ENTITY websiteDesignBy "Website design by: Jay Rovacsek - c3146220">
 ]>
 
@@ -64,7 +63,7 @@
         <priceRange>$10-$50</priceRange>
         <cuisineType>Japanese</cuisineType>
         <restaurantLogo>kitamilogo.png</restaurantLogo>
-        <restaurantPicture>kitamirestaurant.jpg</restaurantPicture>
+        <restaurantPicture>../images/kitamirestaurant.jpg</restaurantPicture>
       </about>
 
       <!-- Start of contact definition, considered extensibility to state/country, but figured that is outside scope of requirements -->
