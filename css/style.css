@@ -136,23 +136,51 @@ img {
 #Footer{
 	text-align: center;
 }
-select{
-	top: 2%;
-	left: 20%;
-	position: relative;
+
+#FormPadding {
+	width: 25%;
+	height: 100%;
+	display: inline-block; 
+	text-align: center;
 }
 
-label{
-	top: 2%;
-	position: relative;
-	z-index: auto;
-	align-self: center;
+#FormContainer {
+	width: 50%;
+	height: inherit;
+	background-color: blue;
+	display: inline-block; 
+	border-radius: 0;
+	font-size: 20px;
 }
 
-input{
-	position: relative;
-	left: 20%;
-	top: 2%;
-	z-index: auto;
-	align-items: center;
+#FormContainer label{
+	margin: 1% 0 0 10%;
+	width: 80%;
+	vertical-align: baseline;
+	text-align: center;
+}
+
+#usertextinput input{
+	margin: 1% 0 0 10%;
+	width: 80%;
+	vertical-align: baseline;
+	text-align: center;
+}
+
+#usercheckboxinput{
+	margin: 1% 0 0 10%;
+	width: 80%;
+	vertical-align: baseline;
+	text-align: center;
+}
+
+#userselectoptioninput select{
+	margin: 1% 0 0 10%;
+	width: 80%;
+	vertical-align: baseline;
+	text-align: center;
+}
+
+#userradiobuttoninput{
+	margin-left: 10%;
 }

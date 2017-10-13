@@ -41,46 +41,44 @@
         <div id="Form">
           <h1>User Contact Form</h1>
           <p><b>For our privacy policy: <a href="https://www.visser.com.au/blog/generic-privacy-policy-for-australian-websites/">please click here</a></b></p>
-          <label for="firstname">Please enter your first name:</label>
-          <input type="text" name="firstname" id="firstname"><br>
-          <label for="surname">Please enter your surname</label>
-          <input type="text" name="surname" id="surname"><br>
-
-          <label for="email">Please enter your email:</label>
-          <input type="text" name="email" id="email"><br>
-
-          <label for="Age Range">Please enter your age range:</label>
-          <select name="Age Range">
-              <option>Younger than 20</option>
-              <option>20 - 30</option>
-              <option>31 - 40</option>
-              <option>41 - 50</option>
-              <option>51 - 60</option>
-              <option>61 or older</option>
-          </select><br>
-
-          <label for="address">Please enter your address:</label>
-          <input type="text" name="address" id="address"><br>
-
-          <label>I would like to subscribe to an email newsletter:</label><br>
-          <label for="yes">Yes</label>
-          <input type="checkbox" name="yes" value="yes" id="yes">
-          <label for="no">No</label>
-          <input type="checkbox" name="no" value="no" id="no"><br>
-      
-          <label>My submission is:</label><br>
-          <label for="submissionQuery">A Query:</label>
-          <input type="radio" name="submissionQuery" value="query" id="submissionQuery"><br>
-
-          <label for="submissionFeedback">Feedback:</label>
-          <input type="radio" name="submissionFeedback" value="feedback" id="submissionFeedback"><br>
-          
-          <label for="submissionOther">Something else:</label>
-          <input type="radio" name="submissionOther" value="feedback" id="submissionOther"><br>
-
-          <input type="submit" value="Click Here to Submit"> 
-          <input type="reset"> 
-
+          <div id="FormPadding">
+          </div>
+          <div id="FormContainer">
+            <div id="usertextinput">
+              <input type="text" name="firstname" id="firstname" placeholder="Enter your first name here"><br>
+              <input type="text" name="surname" id="surname" placeholder="Enter your surname here"><br>
+              <input type="text" name="email" id="email" placeholder="Enter your email here"><br>
+              <input type="text" name="address" id="address" placeholder="Enter your address here" ><br>
+            </div> 
+            <label for="address" class="main">I would like to subscribe to an email newsletter:</label><br>
+            <div id="usercheckboxinput">
+              <label for="yes">Yes<input type="checkbox" name="yes" value="yes" id="yes"></label>
+              <label for="no">No<input type="checkbox" name="no" value="no" id="no"></label>
+            </div>
+            <label for="address">Please enter your age range:</label><br>
+            <div id="userselectoptioninput">
+              <select name="Age Range">
+                <option>Younger than 20</option>
+                <option>20 - 30</option>
+                <option>31 - 40</option>
+                <option>41 - 50</option>
+                <option>51 - 60</option>
+                <option>61 or older</option>
+              </select><br>
+            </div>
+            <div id="userradiobuttoninput">
+              <label>My submission is:<br>
+                <label for="submissionQuery">A Query:
+                  <input type="radio" name="submissionQuery" value="query" id="submissionQuery"></label><br>
+                <label for="submissionFeedback">Feedback:
+                  <input type="radio" name="submissionFeedback" value="feedback" id="submissionFeedback"></label><br>
+                <label for="submissionOther">Something else:
+                <input type="radio" name="submissionOther" value="feedback" id="submissionOther"></label><br>
+              </label><br>
+            </div>
+            <input type="submit" value="Click Here to Submit"> 
+            <input type="reset"> 
+          </div>
         </div>  
       </form>
 
