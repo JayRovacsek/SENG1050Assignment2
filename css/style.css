@@ -147,14 +147,12 @@ img {
 #FormContainer {
 	width: 50%;
 	height: inherit;
-	background-color: blue;
 	display: inline-block; 
 	border-radius: 0;
 	font-size: 20px;
 }
 
 #FormContainer label{
-	margin: 1% 0 0 10%;
 	width: 80%;
 	vertical-align: baseline;
 	text-align: center;
@@ -168,19 +166,49 @@ img {
 }
 
 #usercheckboxinput{
-	margin: 1% 0 0 10%;
+	width: 100%;
+	vertical-align: baseline;
+	text-align: center;
+	margin-bottom: 2%;
+}
+
+#userselectoptioninput{
+	width: 100%;
+	vertical-align: baseline;
+	text-align: center;
+	margin-bottom: 2%;
+}
+
+#userselectoptioninput select{
 	width: 80%;
 	vertical-align: baseline;
 	text-align: center;
 }
 
-#userselectoptioninput select{
-	margin: 1% 0 0 10%;
+#userselectoptioninput label{
 	width: 80%;
 	vertical-align: baseline;
 	text-align: center;
 }
 
 #userradiobuttoninput{
-	margin-left: 10%;
+	width: 100%;
+	vertical-align: baseline;
+	text-align: center;
+	margin-bottom: 2%;
+}
+
+#userradiobuttoninput label{
+	margin: 0 0 2% 0;
+}
+
+#usersubmision{
+	width: 100%;
+	vertical-align: baseline;
+	text-align: center;
+}
+
+#usersubmision input{
+	width: 80%;
+	margin: 0 10% 2% 10%;
 }

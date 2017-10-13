@@ -50,13 +50,13 @@
               <input type="text" name="email" id="email" placeholder="Enter your email here"><br>
               <input type="text" name="address" id="address" placeholder="Enter your address here" ><br>
             </div> 
-            <label for="address" class="main">I would like to subscribe to an email newsletter:</label><br>
             <div id="usercheckboxinput">
-              <label for="yes">Yes<input type="checkbox" name="yes" value="yes" id="yes"></label>
+              <label for="address" class="main">I would like to subscribe to an email newsletter:</label><br>
+              <label for="yes">Yes<input type="checkbox" name="yes" value="yes" id="yes"></label><br>
               <label for="no">No<input type="checkbox" name="no" value="no" id="no"></label>
             </div>
-            <label for="address">Please enter your age range:</label><br>
             <div id="userselectoptioninput">
+              <label for="address">Please enter your age range:</label><br>
               <select name="Age Range">
                 <option>Younger than 20</option>
                 <option>20 - 30</option>
@@ -76,8 +76,10 @@
                 <input type="radio" name="submissionOther" value="feedback" id="submissionOther"></label><br>
               </label><br>
             </div>
-            <input type="submit" value="Click Here to Submit"> 
-            <input type="reset"> 
+            <div id=usersubmision>
+              <input type="submit" value="Click Here to Submit"> 
+              <input type="reset"> 
+            </div>
           </div>
         </div>  
       </form>
