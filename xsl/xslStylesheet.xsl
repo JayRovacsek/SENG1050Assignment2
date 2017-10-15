@@ -1,6 +1,13 @@
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+<!--
+Student Number: c3146220
+Student Name: Jay Rovacsek
+Assignment Part 2
+Document: xsl for transformation use on japanese.xml and indian.xml
+-->
+
 <xsl:output method="html" />
 
     <xsl:template match="template">

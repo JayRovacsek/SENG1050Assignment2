@@ -1,5 +1,9 @@
-// A few items of javascript required to validate and whatnot 
-
+/*
+Student Number: c3146220
+Student Name: Jay Rovacsek
+Assignment Part 2
+Document: index.html "Homepage"
+*/
 
 function userInputValidation(){
     
@@ -14,8 +18,8 @@ function userInputValidation(){
                                                                                     // or worse, perform a number of RCEs.
     sAgeRange = window.document.userFeedbackForm.AgeRange.value,                    // For now, we shall assume that any end user
                                                                                     // will not be a nasty person in this respect
-    bSubmisionQuery = document.getElementById("submisionQuery").checked,           // and generally will adhere to not doing 
-    bFeedbackQuery = document.getElementById("submisionFeedback").checked,         // rather flavourful things to us.
+    bSubmisionQuery = document.getElementById("submisionQuery").checked,            // and generally will adhere to not doing 
+    bFeedbackQuery = document.getElementById("submisionFeedback").checked,          // rather flavourful things to us.
     bOtherQuery = document.getElementById("submisionOther").checked,              
 
     sUserInputLargeText = window.document.userFeedbackForm.userinputtext.value;
@@ -26,7 +30,7 @@ function userInputValidation(){
     
     validNewsletterChoice = validateNewsletterChoice(bNewsletterYes,bNewsletterNo);                 // Validate a choice for newsletter
 
-    validSubmisionChoice = validateSubmissionChoice(bSubmisionQuery,bFeedbackQuery,bOtherQuery);   // Validate submision option has been chosen
+    validSubmisionChoice = validateSubmissionChoice(bSubmisionQuery,bFeedbackQuery,bOtherQuery);    // Validate submision option has been chosen
 
     validTextInput = validLargeUserInput(sUserInputLargeText);                                      // Validate length of submision
 
