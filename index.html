@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
+  <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link  rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link  rel="stylesheet" type="text/css" href="css/style.css"/>                <!-- Standard head definition and settings -->
     <title>Online Food Deliveries Newcastle</title>
 
-    <script src="js/myJavaScripts.js" type="text/javascript">
-    </script>
-
-   </head>
+    <script src="js/myJavaScripts.js" type="text/javascript">                     
+    </script>                                                                     <!--  Point to external script filed away nicely so that we could 
+                                                                                        set permisions on a standard UNIX system this likely would be served from -->
+  </head>                                                                          <!-- and better control who can use these scripts -->
 
   <body>
 
-    <div id = "Navigation" style="background-color:rgba(50, 50, 50, 0.5)">
+    <div id = "Navigation" style="background-color:rgba(50, 50, 50, 0.5)">                    <!-- Setup for the navigation bar -->
       <h3>Navigation</h3>
       <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Home</a></li>
           <li><a href="index.html#Japanese">Japanese Restaurants</a><li> 
           <li><a href="index.html#Indian">Indian Restaurants</a><li>
           <li><a href="index.html#Italian">Italian Restaurants</a><li>
@@ -25,14 +25,14 @@
           <li><a href="index.html#Uruguayan">Uruguayan Restaurants</a><li>
           <li><a href="index.html#About">About</a></li>
           <li><a href="index.html#Contact">Contact</a></li>
-          <li><a href="https://duckduckgo.com/?q=restaurant">Search For Restaurants</a></li>
-          <li><a href="datacollection.html">Submit feedback or requests</a></li>
+          <li><a href="https://duckduckgo.com/?q=restaurant">Search For Restaurants</a></li>    <!-- External search as required in P1 -->
+          <li><a href="datacollection.html">Submit feedback or requests</a></li>                <!-- Data collection page as required in P2 -->
       </ul>
     </div>
 
     <div id="OtherElementsContainer">
 
-      <div id="Header">
+      <div id="Header">                                                                          <!-- Not really a header but is the "head" of our document -->
           <h1>Online Food Deliveries</h1>
           <h2><i>Straight to your door!</i></h2>
       </div>
@@ -47,7 +47,14 @@
           <br>Online Food Deliveries or <abbr title="Online Food Deliveries">OFD</abbr> is a new project in Newcastle</p>
       </div>
 
-
+      <!-- 
+          Below are the divs with unique ids to potentially modify or change on an "as needed" basis for anyone into the future
+          We can also assume that more would be added potentially, if this were done the person(s) into the future might consider
+          Making the divs inherit a style instead of having a number set the exact same, then inidivudal overrides could occur as needed
+          
+          Also; please note; inline styling was used to satisfy P1 requirements, we could set a number of css overrides instead but I am to assume
+          the P2 requirements would be to satisfy the P1 requirements still :)
+      -->
 
       <div id = "Japanese">
         <p style="font-size: 30px"><b><i>Japanese</i></b></p>
@@ -89,6 +96,11 @@
           <br>Uruguayan food is an interesting cusine that doesn't depend highly on vast flavour ranges but is very "Down to earth"</p>
       </div>
 
+      <!-- 
+          Below are the static About/Contact and Footer divs that satisfy a number of requires for P2, including privacy policy, About us, Contact us
+          and terms and conditions pages :)
+      -->
+
       <div id = "About">
         <p style="font-size: 30px"><b><i>About</i></b></p>
         <p>Heya! This page is intended to serve the needs of customers and restraunts which services such as UberEats, Deliveroo and others will surely not be able to compete! </p>
@@ -101,7 +113,7 @@
         <p>This page was created by Jay Rovacsek of the University of Newcastle.
         <br>This Webpage was designed and created based on the specifications required by
         <br>The SENG1050 Course offered at the University of Newcastle
-        <br>To contact us: <a href="https://www.blogtyrant.com/best-about-us-pages/">please click here</a>
+        <br>To contact us: <a href="https://www.blogtyrant.com/best-contact-us-pages/">please click here</a>
         </p>
       </div>
 

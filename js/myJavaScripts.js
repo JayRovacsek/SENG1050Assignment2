@@ -14,9 +14,9 @@ function userInputValidation(){
                                                                                     // or worse, perform a number of RCEs.
     sAgeRange = window.document.userFeedbackForm.AgeRange.value,                    // For now, we shall assume that any end user
                                                                                     // will not be a nasty person in this respect
-    bSubmisionQuery = document.getElementById("submissionQuery").checked,           // and generally will adhere to not doing 
-    bFeedbackQuery = document.getElementById("submissionFeedback").checked,         // rather flavourful things to us.
-    bOtherQuery = document.getElementById("submissionOther").checked,              
+    bSubmisionQuery = document.getElementById("submisionQuery").checked,           // and generally will adhere to not doing 
+    bFeedbackQuery = document.getElementById("submisionFeedback").checked,         // rather flavourful things to us.
+    bOtherQuery = document.getElementById("submisionOther").checked,              
 
     sUserInputLargeText = window.document.userFeedbackForm.userinputtext.value;
 
@@ -26,11 +26,11 @@ function userInputValidation(){
     
     validNewsletterChoice = validateNewsletterChoice(bNewsletterYes,bNewsletterNo);                 // Validate a choice for newsletter
 
-    validSubmissionChoice = validateSubmissionChoice(bSubmisionQuery,bFeedbackQuery,bOtherQuery);   // Validate submission option has been chosen
+    validSubmisionChoice = validateSubmissionChoice(bSubmisionQuery,bFeedbackQuery,bOtherQuery);   // Validate submision option has been chosen
 
-    validTextInput = validLargeUserInput(sUserInputLargeText);                                      // Validate length of submission
+    validTextInput = validLargeUserInput(sUserInputLargeText);                                      // Validate length of submision
 
-    if(validName && validEmail && validNewsletterChoice && validSubmissionChoice && validTextInput){                  // If they're all true, we can say the form is valid :)
+    if(validName && validEmail && validNewsletterChoice && validSubmisionChoice && validTextInput){                  // If they're all true, we can say the form is valid :)
         return true;
     }
     else{
@@ -128,10 +128,10 @@ function validateEmail(email) {
     return regexEmail.test(email);
 }
 
-function validateNewsletterChoice(YesChecked,NoChecked){    // Check if the user wants to recieve a newsletter
+function validateNewsletterChoice(YesChecked,NoChecked){    // Check if the user wants to receive a newsletter
                                                             // Only invalid option is if both yes and no are chosen
     if(YesChecked){                                         // This could also be done on a radio button to avoid this
-        if(NoChecked){                                      // However it serves a good purpose to highlight use of checkboxes.
+        if(NoChecked){                                      // However it serves a good purpose to highlight use of check-boxes.
             return false;                                   // <-- Both checked here, invalid
         }
         else{
@@ -142,16 +142,16 @@ function validateNewsletterChoice(YesChecked,NoChecked){    // Check if the user
         return true;
     }
     else{
-        alert("Heya!\nLooks like you're not a fan of newsletters\nThat's a-okay with us, we'll assume you don't want to recieve it");
+        alert("Heya!\nLooks like you're not a fan of newsletters\nThat's a-okay with us, we'll assume you don't want to receive it");
         return true;                                        // Neither are checked, but we can assume they don't want the newsletter
     }
 
 }
 
 function validateSubmissionChoice(Submission,Feedback,Other){               // Here we can assume that if we get a true value at all that the user
-                                                                            // has selected an option and due to grouping of radiobuttons it should be valid
+                                                                            // has selected an option and due to grouping of radio-buttons it should be valid
     var isValid = true;                                                     // Hence all we need to check for is if all buttons are false.
-                                                                            // If they are we warn them and let them go no futher.
+                                                                            // If they are we warn them and let them go no further.
     if(!Submission && !Feedback && !Other){                                 // This saves a very messy nested if/else setup.
         isValid = false;
         alert("You may have forgotten to choose a submission type\nPlease check your selection.")
@@ -174,9 +174,9 @@ function validLargeUserInput(Input){
 
 }
 
-function errorsBeHere(number){
-
-    switch(number){
+function errorsBeHere(number){                                                          // Spitting red backgrounds to highlight issues in the form was getting
+                                                                                        // messy looking so instead a small function is called to do it depending 
+    switch(number){                                                                     // on what section we want to colour differently
         case 0:
             window.document.userFeedbackForm.firstname.style.backgroundColor = "red";
             break;
