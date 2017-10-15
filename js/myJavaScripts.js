@@ -44,7 +44,7 @@ function nameValidation(name, surname, address){    // Validation of Firstname, 
     // Below line of code is used to strip spaces before a name, after a name and otherwise assume it is valid.
     // One of the largest issues here would be that we cannot account for all obscure or niche names we potentially
     // Will encounter, I searched for an all encompassing solution to this, however we cannot tell people that names such as
-    // Sørensen, Юдович or 李 are invalid. as found on: https://stackoverflow.com/questions/9445334/javascript-regex-valid-name
+    // Sørensen, Юдович or 李 are invalid. as suggested on: https://stackoverflow.com/questions/9445334/javascript-regex-valid-name
 
     // My reasoning for not validation more than nulls and "" for address also stem from a similar issue.
     // As it would be far to complex to consider all the potential address styles or entries from around the world

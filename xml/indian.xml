@@ -168,8 +168,8 @@
         <restaurantDescription>Exquisite, traditional Japanese food with a subtle, contemporary edge; harbourside in the Honeysuckle Precinct of Newcastle.</restaurantDescription>
         <priceRange>$20-$150</priceRange>
         <cuisineType>Japanese</cuisineType>
-        <restaurantLogo>http://www.nagisa.com.au/images/system/nagisa-logo.png</restaurantLogo>
-        <restaurantPicture>http://www.hunterhunter.com.au/images/nagisa/nagisa-interior.jpg</restaurantPicture>
+        <restaurantLogo>../images/rajscornerlogo.png</restaurantLogo>
+        <restaurantPicture>../images/rajscornerrestaurant.jpg</restaurantPicture>
       </about>
 
       <!-- Start of contact definition, considered extensibility to state/country, but figured that is outside scope of requirements -->

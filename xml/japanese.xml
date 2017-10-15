@@ -62,7 +62,7 @@
         <restaurantDescription>Kitami Hamilton Take away and Restaurant is the first ever Japanese take away in Beaumont St. that Nobuyuki built from scratch after his partners of Kitami Darby St. had to leave and sell the place. It's a B.Y.O. wine licensed which made it easier and cheaper for the customer. The place will fill your stomach with heavy Japanese food either lunch or dinner. Staff are well trained by the owner and sashimis are still made by the Head Chef and Owner Nobuyuki, so it won't let you down.</restaurantDescription>
         <priceRange>$10-$50</priceRange>
         <cuisineType>Japanese</cuisineType>
-        <restaurantLogo>kitamilogo.png</restaurantLogo>
+        <restaurantLogo>../images/kitamilogo.png</restaurantLogo>
         <restaurantPicture>../images/kitamirestaurant.jpg</restaurantPicture>
       </about>
 
