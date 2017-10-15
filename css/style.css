@@ -160,7 +160,18 @@ hr {
 	position: relative;
 	width:70%;
 	display: inline-block;
-	background-color:rgba(167, 1, 1, 0.5);
+}
+
+#Info{
+	background-color:rgba(50, 50, 50, 0.5);
+	margin: 2% 0;
+}
+
+#Info img{
+	width: 25%;
+	display: block;
+	margin: auto;
+	margin-bottom: 2%;
 }
 
 #Form {

@@ -42,10 +42,10 @@
           </div>
           <div id="FormContainer">
             <div id="usertextinput">
-              <input type="text" name="firstname" id="firstname" placeholder="Enter your first name here"><br>
-              <input type="text" name="surname" id="surname" placeholder="Enter your surname here"><br>
-              <input type="text" name="email" id="email" placeholder="Enter your email here"><br>
-              <input type="text" name="address" id="address" placeholder="Enter your address here" ><br>
+              <input type="text" name="firstname" id="firstname" placeholder="Enter your first name here*"><br>
+              <input type="text" name="surname" id="surname" placeholder="Enter your surname here*"><br>
+              <input type="text" name="email" id="email" placeholder="Enter your email here*"><br>
+              <input type="text" name="address" id="address" placeholder="Enter your address here*" ><br>
             </div> 
             <div id="usercheckboxinput">
               <label for="address" class="main">I would like to subscribe to an email newsletter:</label><br>
@@ -53,7 +53,7 @@
               <label for="no">No<input type="checkbox" name="NewsletterNo" value="no" id="NewsletterNo"></label>
             </div>
             <div id="userselectoptioninput">
-              <label for="address">Please enter your age range:</label><br>
+              <label for="address">Please enter your age range: *</label><br>
               <select name="AgeRange">
                 <option>Younger than 20</option>
                 <option>20 - 30</option>
@@ -64,7 +64,7 @@
               </select><br>
             </div>
             <div id="userradiobuttoninput">
-              <label>My submission is:<br>
+              <label>My submission is *:<br>
                 <label for="submissionQuery">A Query:
                   <input type="radio" name="queryType" value="submissionQuery" id="submissionQuery"></label><br>
                 <label for="submissionFeedback">Feedback:
@@ -74,12 +74,13 @@
               </label><br>
             </div>
             <div id="usertextinputlarge">
-              <textarea rows='5' name="userinputtext" id="userinputtext" placeholder="Please enter your feedback/query here"></textarea>
+              <textarea rows='5' name="userinputtext" id="userinputtext" placeholder="Please enter your feedback/query here; No greater than 1000 characters"></textarea>
             </div>
             <div id=usersubmision>
               <input type="submit" value="Click Here to Submit"> 
               <input type="reset"> 
             </div>
+            <p>* Required</p>
           </div>
         </div>  
       </form>

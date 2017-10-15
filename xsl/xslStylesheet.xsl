@@ -80,12 +80,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     </xsl:template>
 
-    <xsl:template match="phoneContact">
-
-        <xsl:value-of select="."/>
-
-    </xsl:template>
-
     <xsl:template match="menu">
 
         <div id="InfoDiv">
@@ -117,7 +111,9 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
                 <xsl:value-of select="postcode"/></p>
             </xsl:for-each>
             <h2>Contact:</h2>
-            <xsl:apply-templates select="phoneContact"/>
+            <!-- STUFF HERE, NOT WORKING? -->
+            <h2>Website:</h2>
+            <a href='URL'><xsl:value-of select="URL"/></a>
         </div>
 
     </xsl:template>
