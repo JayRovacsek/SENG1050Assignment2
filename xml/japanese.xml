@@ -20,9 +20,7 @@
         <!ELEMENT streetType (#PCDATA)>
         <!ELEMENT locality (#PCDATA)>
         <!ELEMENT postcode (#PCDATA)>
-      <!ELEMENT phoneContact EMPTY>
-        <!ATTLIST phoneContact lineType (Landline|Mobile) #REQUIRED>
-        <!ATTLIST phoneContact contactNumber CDATA #REQUIRED>
+      <!ELEMENT phoneContact (#PCDATA)>
       <!ELEMENT URL (#PCDATA)>
 
     <!ELEMENT openHours (servicePeriod*)>
@@ -51,8 +49,97 @@
 
 <template>
   <restaurants>
-
   <!-- ####################################################### Start of restaurant definition ####################################################### -->
+    <restaurant>
+      <restaurantName>Asa-Don</restaurantName>
+
+      <!-- Start of about definition ####################################################### -->
+      <about>
+        <restaurantDescription>Asa-Don is a small team of passionate food lovers lead by Asako Dalby, here to spread the experience of home-made Japanese way of eating.</restaurantDescription>
+        <priceRange>$20-$60</priceRange>
+        <cuisineType>Japanese</cuisineType>
+        <restaurantLogo>../images/asadonlogo.png</restaurantLogo>
+        <restaurantPicture>../images/asadonrestaurant.jpg</restaurantPicture>
+      </about>
+
+      <!-- Start of contact definition, considered extensibility to state/country, but figured that is outside scope of requirements -->
+      <contact>
+        <address>
+          <streetNumber>179</streetNumber>
+          <streetName>King</streetName>
+          <streetType>Street</streetType>
+          <locality>Newcastle</locality>
+          <postcode>2300</postcode>
+        </address>
+        <phoneContact>0249291035</phoneContact>
+        <URL>https://asa-don.com.au/</URL>
+      </contact>
+
+      <!-- Start of open hours definition, while singular as required by assignment, children exist to allow entry of multiple days and potentially multiple
+      Open hours per day or different segments for breakfast, lunch, dinner, etc -->
+      <openHours>
+        <servicePeriod>
+          <day dayOfWeek="Tuesday" />
+          <startTime>11:30am</startTime>
+          <endTime>8:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Wednesday" />
+          <startTime>11:30am</startTime>
+          <endTime>8:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Thursday" />
+          <startTime>11:30am</startTime>
+          <endTime>8:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Friday" />
+          <startTime>11:30am</startTime>
+          <endTime>8:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Saturday" />
+          <startTime>5:00pm</startTime>
+          <endTime>3pm</endTime>
+        </servicePeriod>
+      </openHours>
+
+      <!-- Start of delivery definition, as per requirements of assignment ####################################################### -->
+      <deliveryDetails>
+        <minimumPrice>$30</minimumPrice>
+        <deliveryFee>$5</deliveryFee>
+      </deliveryDetails>
+
+      <!-- Start of menu definition, aint that nifty? ####################################################### -->
+      <menu>
+        <item>
+          <itemName>Omu-Curry Rice</itemName>
+          <itemDescription>Japanese curry with rice omelette and braised chicken</itemDescription>
+          <itemType dishType="chicken" />
+          <price>$13</price>
+          <allergens>NA</allergens>
+        </item>
+        <item>
+          <itemName>Buta Don</itemName>
+          <itemDescription>Pork with special sauce and vegetable served over a bowl of rice.</itemDescription>
+          <itemType dishType="vegetarian" />
+          <price>$16</price>
+          <allergens>NA</allergens>
+        </item>
+        <item>
+          <itemName>Ebi Ten Soba</itemName>
+          <itemDescription>Soba (buck wheat noodles) in a hot soup and prawn tempura on the side</itemDescription>
+          <itemType dishType="seafood" />
+          <price>$18</price>
+          <allergens>Seafood</allergens>
+        </item>
+      </menu>
+    </restaurant>
 
     <restaurant>
       <restaurantName>Kitami</restaurantName>
@@ -75,7 +162,7 @@
           <locality>Hamilton</locality>
           <postcode>2304</postcode>
         </address>
-        <phoneContact lineType="Landline" contactNumber="0249698540" />
+        <phoneContact>0249698540</phoneContact>
         <URL>http://www.kitami-japanese-restaurant.com/</URL>
       </contact>
 
@@ -168,7 +255,7 @@
           <locality>Honeysuckle</locality>
           <postcode>2300</postcode>
         </address>
-        <phoneContact lineType="Landline" contactNumber="0249294122" />
+        <phoneContact>0249294122</phoneContact>
         <URL>http://www.nagisa.com.au/</URL>
       </contact>
 
@@ -243,100 +330,6 @@
         </item>
       </menu>
     </restaurant>
-
-<!--#######################################################DIVIDER TO MAKE THIS EASIER TO READ##########################################################-->
-
-    <restaurant>
-      <restaurantName>Asa-Don</restaurantName>
-
-      <!-- Start of about definition ####################################################### -->
-      <about>
-        <restaurantDescription>Asa-Don is a small team of passionate food lovers lead by Asako Dalby, here to spread the experience of home-made Japanese way of eating.</restaurantDescription>
-        <priceRange>$20-$60</priceRange>
-        <cuisineType>Japanese</cuisineType>
-        <restaurantLogo>../images/asadonlogo.png</restaurantLogo>
-        <restaurantPicture>../images/asadonrestaurant.jpg</restaurantPicture>
-      </about>
-
-      <!-- Start of contact definition, considered extensibility to state/country, but figured that is outside scope of requirements -->
-      <contact>
-        <address>
-          <streetNumber>179</streetNumber>
-          <streetName>King</streetName>
-          <streetType>Street</streetType>
-          <locality>Newcastle</locality>
-          <postcode>2300</postcode>
-        </address>
-        <phoneContact lineType="Landline" contactNumber="0249291035" />
-        <URL>https://asa-don.com.au/</URL>
-      </contact>
-
-      <!-- Start of open hours definition, while singular as required by assignment, children exist to allow entry of multiple days and potentially multiple
-      Open hours per day or different segments for breakfast, lunch, dinner, etc -->
-      <openHours>
-        <servicePeriod>
-          <day dayOfWeek="Tuesday" />
-          <startTime>11:30am</startTime>
-          <endTime>8:00pm</endTime>
-        </servicePeriod>
-
-        <servicePeriod>
-          <day dayOfWeek="Wednesday" />
-          <startTime>11:30am</startTime>
-          <endTime>8:00pm</endTime>
-        </servicePeriod>
-
-        <servicePeriod>
-          <day dayOfWeek="Thursday" />
-          <startTime>11:30am</startTime>
-          <endTime>8:00pm</endTime>
-        </servicePeriod>
-
-        <servicePeriod>
-          <day dayOfWeek="Friday" />
-          <startTime>11:30am</startTime>
-          <endTime>8:00pm</endTime>
-        </servicePeriod>
-
-        <servicePeriod>
-          <day dayOfWeek="Saturday" />
-          <startTime>5:00pm</startTime>
-          <endTime>3pm</endTime>
-        </servicePeriod>
-      </openHours>
-
-      <!-- Start of delivery definition, as per requirements of assignment ####################################################### -->
-      <deliveryDetails>
-        <minimumPrice>$30</minimumPrice>
-        <deliveryFee>$5</deliveryFee>
-      </deliveryDetails>
-
-      <!-- Start of menu definition, aint that nifty? ####################################################### -->
-      <menu>
-        <item>
-          <itemName>Omu-Curry Rice</itemName>
-          <itemDescription>Japanese curry with rice omelette and braised chicken</itemDescription>
-          <itemType dishType="chicken" />
-          <price>$13</price>
-          <allergens>NA</allergens>
-        </item>
-        <item>
-          <itemName>Buta Don</itemName>
-          <itemDescription>Pork with special sauce and vegetable served over a bowl of rice.</itemDescription>
-          <itemType dishType="vegetarian" />
-          <price>$16</price>
-          <allergens>NA</allergens>
-        </item>
-        <item>
-          <itemName>Ebi Ten Soba</itemName>
-          <itemDescription>Soba (buck wheat noodles) in a hot soup and prawn tempura on the side</itemDescription>
-          <itemType dishType="seafood" />
-          <price>$18</price>
-          <allergens>Seafood</allergens>
-        </item>
-      </menu>
-    </restaurant>
-
   </restaurants>
   <other>&websiteDesignBy;</other>
 </template>

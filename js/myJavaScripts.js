@@ -8,6 +8,11 @@ Document: index.html "Homepage"
 function userInputValidation(){
     
     var 
+    validName = false,
+    validEmail = false,
+    validNewsletterChoice = false,
+    validSubmisionChoice = false,
+    validTextInput = false,
     sFirstName = window.document.userFeedbackForm.firstname.value,                  // Grab some data from the form
     sSurname = window.document.userFeedbackForm.surname.value,                      // that we intend on checking for
     sEmail = window.document.userFeedbackForm.email.value,                          // validity, my one concern is that
@@ -16,7 +21,7 @@ function userInputValidation(){
     bNewsletterYes = document.getElementById("NewsletterYes").checked,              // will never have their data validated
     bNewsletterNo = document.getElementById("NewsletterNo").checked,                // and could potentially send invalid data
                                                                                     // or worse, perform a number of RCEs.
-    sAgeRange = window.document.userFeedbackForm.AgeRange.value,                    // For now, we shall assume that any end user
+                                                                                    // For now, we shall assume that any end user
                                                                                     // will not be a nasty person in this respect
     bSubmisionQuery = document.getElementById("submisionQuery").checked,            // and generally will adhere to not doing 
     bFeedbackQuery = document.getElementById("submisionFeedback").checked,          // rather flavourful things to us.
@@ -70,30 +75,36 @@ function nameValidation(name, surname, address){    // Validation of Firstname, 
         case "":
             isValidName = false;        // Blank, no good. You lose.
             errorsBeHere(0);
+            break;
         case null:
             isValidName = false;        // Can a user pass a null? Even if they can't we never want that.
             errorsBeHere(0);
+            break;
     }
 
     switch(surname){                    // As above
         case "":
             isValidSurnname = false;    // Blank no good. Like dividing by 0.
             errorsBeHere(1);
+            break;
         case null:
             isValidSurnname = false;    // Null likely even worse.
             errorsBeHere(1);
+            break;
     }
 
     switch(address){                    // As above
         case "":
             isValidSurnname = false;    // Blank no good. Like dividing by 0.
             errorsBeHere(2);
+            break;
         case null:
             isValidSurnname = false;    // Null likely even worse.
             errorsBeHere(2);
+            break;
     }
 
-    if(isValidName == true && isValidSurnname == true && isValidAddress == true){       // Are both names and the address valid?
+    if(isValidName === true && isValidSurnname === true && isValidAddress === true){       // Are both names and the address valid?
         if(nameLength < 50 && surnameLength < 50 && addressLength < 100){               // Let's also check they ain't trying a silly long name
             return true;                                                                // Failing a script or 50 char+ name, valid :)
         }
@@ -126,7 +137,7 @@ function validateEmail(email) {
 
     if(!regexEmail.test(email)){
         errorsBeHere(3);
-        alert("Heya!\nYou seem to have forgotten to have entered a valid email\nPlease check your entry and try again.")
+        alert("Heya!\nYou seem to have forgotten to have entered a valid email\nPlease check your entry and try again.");
     }
 
     return regexEmail.test(email);
@@ -158,7 +169,7 @@ function validateSubmissionChoice(Submission,Feedback,Other){               // H
                                                                             // If they are we warn them and let them go no further.
     if(!Submission && !Feedback && !Other){                                 // This saves a very messy nested if/else setup.
         isValid = false;
-        alert("You may have forgotten to choose a submission type\nPlease check your selection.")
+        alert("You may have forgotten to choose a submission type\nPlease check your selection.");
     }
 
     return isValid; 
@@ -169,7 +180,7 @@ function validLargeUserInput(Input){
     var InputLength = Input.length;
 
     if(InputLength > 1000){
-        alert("You may have attempted to enter more than 1,000 characters in your submission\nPlease check your submission and try again.")
+        alert("You may have attempted to enter more than 1,000 characters in your submission\nPlease check your submission and try again.");
         return false;
     }
     else{

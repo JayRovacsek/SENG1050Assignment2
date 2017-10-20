@@ -20,9 +20,7 @@
         <!ELEMENT streetType (#PCDATA)>
         <!ELEMENT locality (#PCDATA)>
         <!ELEMENT postcode (#PCDATA)>
-      <!ELEMENT phoneContact EMPTY>
-        <!ATTLIST phoneContact lineType (Landline|Mobile) #REQUIRED>
-        <!ATTLIST phoneContact contactNumber CDATA #REQUIRED>
+      <!ELEMENT phoneContact (#PCDATA)>
       <!ELEMENT URL (#PCDATA)>
 
     <!ELEMENT openHours (servicePeriod*)>
@@ -46,120 +44,12 @@
         <!ELEMENT allergens (#PCDATA)>
 
   <!ELEMENT other (#PCDATA)>
-
     <!ENTITY websiteDesignBy "Website design by: Jay Rovacsek - c3146220">
 ]>
 
 <template>
   <restaurants>
-
   <!-- ####################################################### Start of restaurant definition ####################################################### -->
-
-    <restaurant>
-      <restaurantName>Saphire Indian</restaurantName>
-
-      <!-- Start of about definition ####################################################### -->
-      <about>
-        <restaurantDescription>Indian fine dining restaurant located between Merewether and Adamstown offering 5 star food and service, including dine in, takeaway, delivery and catering</restaurantDescription>
-        <priceRange>$15-$70</priceRange>
-        <cuisineType>Indian</cuisineType>
-        <restaurantLogo>https://sapphireindianrestaurant.com.au/wp-content/uploads/2016/05/logo-60px.png</restaurantLogo>
-        <restaurantPicture>https://sapphireindianrestaurant.com.au/wp-content/uploads/bb-plugin/cache/img-gallery-028-landscape.jpg</restaurantPicture>
-      </about>
-
-      <!-- Start of contact definition, considered extensibility to state/country, but figured that is outside scope of requirements -->
-      <contact>
-        <address>
-          <streetNumber>367-369</streetNumber>
-          <streetName>Glebe</streetName>
-          <streetType>Road</streetType>
-          <locality>Merewether</locality>
-          <postcode>2291</postcode>
-        </address>
-        <phoneContact lineType="Landline" contactNumber="0249632369" />
-        <URL>https://sapphireindianrestaurant.com.au/</URL>
-      </contact>
-
-      <!-- Start of open hours definition, while singular as required by assignment, children exist to allow entry of multiple days and potentially multiple
-           Open hours per day or different segments for breakfast, lunch, dinner, etc -->
-      <openHours>
-        <servicePeriod>
-          <day dayOfWeek="Monday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
-        </servicePeriod>
-
-        <servicePeriod>
-          <day dayOfWeek="Tuesday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
-        </servicePeriod>
-
-        <servicePeriod>
-          <day dayOfWeek="Wednesday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
-        </servicePeriod>
-
-        <servicePeriod>
-          <day dayOfWeek="Thursday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
-        </servicePeriod>
-
-        <servicePeriod>
-          <day dayOfWeek="Friday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
-        </servicePeriod>
-
-        <servicePeriod>
-          <day dayOfWeek="Saturday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
-        </servicePeriod>
-
-        <servicePeriod>
-          <day dayOfWeek="Sunday" />
-          <startTime>12:00pm</startTime>
-          <endTime>10:00pm</endTime>
-        </servicePeriod>
-      </openHours>
-
-        <!-- Start of delivery definition, as per requirements of assignment ####################################################### -->
-      <deliveryDetails>
-        <minimumPrice>$20</minimumPrice>
-        <deliveryFee>$10</deliveryFee>
-      </deliveryDetails>
-
-        <!-- Start of menu definition, aint that nifty? ####################################################### -->
-      <menu>
-        <item>
-          <itemName>Onion Bhajji</itemName>
-          <itemDescription>Onion Bhajis are tasty little onion balls bound together with lightly spiced and fragrant chickpea flour batter</itemDescription>
-          <itemType dishType="vegetarian" />
-          <price>$12.90</price>
-          <allergens>NA</allergens>
-        </item>
-        <item>
-          <itemName>Paneer Shashlik</itemName>
-          <itemDescription>Cottage cheese, onion, capsicum and tomatoes grilled to perfection with Smokey and zesty flavours</itemDescription>
-          <itemType dishType="vegetarian" />
-          <price>$16.90</price>
-          <allergens>NA</allergens>
-        </item>
-        <item>
-          <itemName>Zingha Vada</itemName>
-          <itemDescription>Black Tiger King Prawns are coated in a light thin batter coated with spices and deep fried</itemDescription>
-          <itemType dishType="seafood" />
-          <price>$22.90</price>
-          <allergens>Seafood</allergens>
-        </item>
-      </menu>
-    </restaurant>
-
-<!--#######################################################DIVIDER TO MAKE THIS EASIER TO READ##########################################################-->
-
     <restaurant>
       <restaurantName>Raj's Corner</restaurantName>
 
@@ -181,7 +71,7 @@
           <locality>Hamilton</locality>
           <postcode>2303</postcode>
         </address>
-        <phoneContact lineType="Landline" contactNumber="0249621827" />
+        <phoneContact>0249621827</phoneContact>
         <URL>https://rajscorner.com.au/</URL>
       </contact>
 
@@ -266,6 +156,111 @@
 <!--#######################################################DIVIDER TO MAKE THIS EASIER TO READ##########################################################-->
 
     <restaurant>
+      <restaurantName>Saphire Indian</restaurantName>
+
+      <!-- Start of about definition ####################################################### -->
+      <about>
+        <restaurantDescription>Indian fine dining restaurant located between Merewether and Adamstown offering 5 star food and service, including dine in, takeaway, delivery and catering</restaurantDescription>
+        <priceRange>$15-$70</priceRange>
+        <cuisineType>Indian</cuisineType>
+        <restaurantLogo>https://sapphireindianrestaurant.com.au/wp-content/uploads/2016/05/logo-60px.png</restaurantLogo>
+        <restaurantPicture>https://sapphireindianrestaurant.com.au/wp-content/uploads/bb-plugin/cache/img-gallery-028-landscape.jpg</restaurantPicture>
+      </about>
+
+      <!-- Start of contact definition, considered extensibility to state/country, but figured that is outside scope of requirements -->
+      <contact>
+        <address>
+          <streetNumber>367-369</streetNumber>
+          <streetName>Glebe</streetName>
+          <streetType>Road</streetType>
+          <locality>Merewether</locality>
+          <postcode>2291</postcode>
+        </address>
+        <phoneContact>0249632369</phoneContact>
+        <URL>https://sapphireindianrestaurant.com.au/</URL>
+      </contact>
+
+      <!-- Start of open hours definition, while singular as required by assignment, children exist to allow entry of multiple days and potentially multiple
+           Open hours per day or different segments for breakfast, lunch, dinner, etc -->
+      <openHours>
+        <servicePeriod>
+          <day dayOfWeek="Monday" />
+          <startTime>12:00pm</startTime>
+          <endTime>10:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Tuesday" />
+          <startTime>12:00pm</startTime>
+          <endTime>10:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Wednesday" />
+          <startTime>12:00pm</startTime>
+          <endTime>10:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Thursday" />
+          <startTime>12:00pm</startTime>
+          <endTime>10:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Friday" />
+          <startTime>12:00pm</startTime>
+          <endTime>10:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Saturday" />
+          <startTime>12:00pm</startTime>
+          <endTime>10:00pm</endTime>
+        </servicePeriod>
+
+        <servicePeriod>
+          <day dayOfWeek="Sunday" />
+          <startTime>12:00pm</startTime>
+          <endTime>10:00pm</endTime>
+        </servicePeriod>
+      </openHours>
+
+        <!-- Start of delivery definition, as per requirements of assignment ####################################################### -->
+      <deliveryDetails>
+        <minimumPrice>$20</minimumPrice>
+        <deliveryFee>$10</deliveryFee>
+      </deliveryDetails>
+
+        <!-- Start of menu definition, aint that nifty? ####################################################### -->
+      <menu>
+        <item>
+          <itemName>Onion Bhajji</itemName>
+          <itemDescription>Onion Bhajis are tasty little onion balls bound together with lightly spiced and fragrant chickpea flour batter</itemDescription>
+          <itemType dishType="vegetarian" />
+          <price>$12.90</price>
+          <allergens>NA</allergens>
+        </item>
+        <item>
+          <itemName>Paneer Shashlik</itemName>
+          <itemDescription>Cottage cheese, onion, capsicum and tomatoes grilled to perfection with Smokey and zesty flavours</itemDescription>
+          <itemType dishType="vegetarian" />
+          <price>$16.90</price>
+          <allergens>NA</allergens>
+        </item>
+        <item>
+          <itemName>Zingha Vada</itemName>
+          <itemDescription>Black Tiger King Prawns are coated in a light thin batter coated with spices and deep fried</itemDescription>
+          <itemType dishType="seafood" />
+          <price>$22.90</price>
+          <allergens>Seafood</allergens>
+        </item>
+      </menu>
+    </restaurant>
+
+<!--#######################################################DIVIDER TO MAKE THIS EASIER TO READ##########################################################-->
+
+    <restaurant>
       <restaurantName>Surtaj Indian</restaurantName>
 
       <!-- Start of about definition ####################################################### -->
@@ -286,7 +281,7 @@
           <locality>Newcastle</locality>
           <postcode>2300</postcode>
         </address>
-        <phoneContact lineType="Landline" contactNumber="0249263555" />
+        <phoneContact>0249263555</phoneContact>
         <URL>http://surtajindianrestaurant.com.au/</URL>
       </contact>
 

@@ -15,7 +15,7 @@ Document: xsl for transformation use on japanese.xml and indian.xml
         <html>
             <head>	
                 <meta charset="UTF-8"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>                 <!-- Header and whatnot, same as the main and data collection pages -->
                 <link  rel="stylesheet" type="text/css" href="../css/style.css" />
                 <title>Online Food Deliveries Newcastle</title>
 
@@ -29,12 +29,13 @@ Document: xsl for transformation use on japanese.xml and indian.xml
                     <h3>Navigation</h3>
                     <ul>
                         <li><a href="../index.html">Home</a></li>
-                        <li><a href="../datacollection.html">Submit feedback or requests</a></li>
+                        <li><a href="../datacollection.html">Submit feedback or requests</a></li>       <!-- Links back to other pages -->
                     </ul>
                 </div>
 
                 <xsl:apply-templates select="navigation"/>
-                <xsl:apply-templates select="restaurants/restaurant"/>
+                    
+                <xsl:apply-templates select="restaurants/restaurant"/>                                  <!-- Some templates to apply and whatnot -->
 
                 <xsl:apply-templates select="other"/>
 
@@ -50,14 +51,14 @@ Document: xsl for transformation use on japanese.xml and indian.xml
             <h2>Restaurant: <xsl:value-of select="restaurantName"/></h2>
             <xsl:apply-templates select="about"/>
             <xsl:apply-templates select="menu"/>
-            <xsl:apply-templates select="contact"/>
+            <xsl:apply-templates select="contact"/>                                                     <!-- Display info about restaurants -->
             <xsl:apply-templates select="openHours"/>
             <xsl:apply-templates select="deliveryDetails"/>
 
             <div id="RestaurantImage">
                 <img alt="Restaurant Image" class="hoverable">
                     <xsl:attribute name="src">
-                        <xsl:value-of select="about/restaurantPicture"/>			
+                        <xsl:value-of select="about/restaurantPicture"/>			                    <!-- Image of the restaurant -->
                     </xsl:attribute>			
                 </img>
             </div>
@@ -69,12 +70,12 @@ Document: xsl for transformation use on japanese.xml and indian.xml
 
         <img alt="Logo">
             <xsl:attribute name="src">
-                <xsl:value-of select="restaurantLogo"/>			
+                <xsl:value-of select="restaurantLogo"/>			                                        <!-- Logo of restaurant -->
             </xsl:attribute>			
 	    </img>
 
         <div id="InfoDiv">
-            <xsl:value-of select="restaurantDescription"/>
+            <xsl:value-of select="restaurantDescription"/>                  
             <p>Price Range:</p>
             <xsl:value-of select="priceRange"/>
         </div>
@@ -83,7 +84,7 @@ Document: xsl for transformation use on japanese.xml and indian.xml
 
     <xsl:template match="other">
 
-        <xsl:value-of select="."/>
+        <xsl:value-of select="."/>                                                                      <!-- Display the entity we made in part 1 as text -->
 
     </xsl:template>
 
@@ -96,7 +97,7 @@ Document: xsl for transformation use on japanese.xml and indian.xml
                 <p>Item:</p>
                 <xsl:value-of select="itemName"/>
                 <p>Description:</p>
-                <xsl:value-of select="itemDescription"/>
+                <xsl:value-of select="itemDescription"/>                                                <!-- Display menu recursively -->
                 <p>Price:</p>
                 <xsl:value-of select="price"/>
                 <p>Allergens:</p>
@@ -111,7 +112,7 @@ Document: xsl for transformation use on japanese.xml and indian.xml
         <div id="InfoDiv">
             <h2>Address:</h2>
             <xsl:for-each select="address">
-                <p><xsl:value-of select="streetNumber"/>_
+                <p><xsl:value-of select="streetNumber"/>_                                               <!-- Display contact info -->
                 <xsl:value-of select="streetName"/>_
                 <xsl:value-of select="streetType"/>, 
                 <xsl:value-of select="locality"/>, 
@@ -119,6 +120,7 @@ Document: xsl for transformation use on japanese.xml and indian.xml
             </xsl:for-each>
             <h2>Contact:</h2>
             <!-- STUFF HERE, NOT WORKING? -->
+            <xsl:value-of select="phoneContact"/>
             <h2>Website:</h2>
             <a href='URL'><xsl:value-of select="URL"/></a>
         </div>

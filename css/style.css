@@ -51,7 +51,6 @@ a:hover {
 
 img{
 	position: relative;								/* Images relative unless we say otherwise (Why would you?) size it down in relation to the div parent also */
-	size: 50%;
 }
 
 p {

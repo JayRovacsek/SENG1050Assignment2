@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../xsl/xslStylesheet.xsl"?>
 <!DOCTYPE template [
 <!ELEMENT template (restaurants,other)>
   <!ELEMENT restaurants (restaurant*)>
@@ -19,9 +20,7 @@
         <!ELEMENT streetType (#PCDATA)>
         <!ELEMENT locality (#PCDATA)>
         <!ELEMENT postcode (#PCDATA)>
-      <!ELEMENT phoneContact EMPTY>
-        <!ATTLIST phoneContact lineType (Landline|Mobile) #REQUIRED>
-        <!ATTLIST phoneContact contactNumber CDATA #REQUIRED>
+      <!ELEMENT phoneContact (#PCDATA)>
       <!ELEMENT URL (#PCDATA)>
 
     <!ELEMENT openHours (servicePeriod*)>
@@ -45,7 +44,6 @@
         <!ELEMENT allergens (#PCDATA)>
 
   <!ELEMENT other (#PCDATA)>
-
     <!ENTITY websiteDesignBy "Website design by: Jay Rovacsek - c3146220">
 ]>
 
@@ -74,8 +72,7 @@
           <locality></locality>
           <postcode></postcode>
         </address>
-        <phoneContact lineType="Landline" contactNumber="0000000000" />
-        <phoneContact lineType="Mobile" contactNumber="0000000000" />
+        <phoneContact>000</phoneContact>
         <URL></URL>
       </contact>
 
